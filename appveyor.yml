@@ -1,0 +1,13 @@
+build: off
+
+stack: go 1.11
+
+environment:
+  GO111MODULE: on
+
+before_test:
+  - go version
+  - go vet ./...
+
+test_script:
+  - go test -v ./...
